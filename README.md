@@ -1,0 +1,13 @@
+# Reto JavaScript Pair Programming PIMEC 2023
+
+[URL del challenge](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH)
+[Demo de la app](https://yasertarek.github.io/rock-paper-scissors//)
+
+Os adjunto la demo para que veaís fácilmente como funciona la app. No inspeccioneis el código, ni siquiera por que hay _algo_ que no os sale. Prefiero que me llaméis a mi.
+
+1. Escribir con lenguaje natural una idea de lo que tiene que ocurrir en esta aplicación. Podéis escribirlo en el mismo README.md más abajo
+2. En principio todo el CSS necesario y maquetación ya está implementado. Pero puedes añadir tus clases CSS, estilos en línea a partir de la propiedad .style, etc.
+3. Pensad bien qué variables de estado tiene está aplicación. Codificad previamente la lógica de piedra-papel-tijeras en funciones JavaScript, no lo mezcléis con el DOM - [algoritmo](https://www.codewars.com/kata/5672a98bdbdd995fad00000f)
+4. No os preocupéis por las animaciones de la demo, no hay por qué implementarlas en una primera instancia! Aunque el fichero style.css os puede dar una idea de qué clases añadir o eliminar para implementar más fácil la app
+
+## Pregunta 1: Describe con lenguaje natural que tiene que hacer la app.
