@@ -9,14 +9,42 @@ let userPoints = 0;
 
 
 //Click events to buttons
-scissors.addEventListener("click", scissorsGame){
-};
+scissors.addEventListener("click", function(event){
+    console.dir(event.currentTarget.classList[0]);
+    console.dir(typeofevent.currentTarget.id);
+    
+});
 
-paper.addEventListener("click", startGame);
-rock.addEventListener("click", startGame);
+paper.addEventListener("click", game);
+rock.addEventListener("click", game);
 
 
 //Function
+
+function game(event){
+    userChoice = event.currentTarget.id;
+    machineChoice = options[Math.floor(Math.random()*3)];
+    if (userChoice == machineChoice){
+        console.log("empate");
+    }
+    else if ((userChoice == "scissors" && machineChoice == "paper")||(userChoice == "paper" && machineChoice == "rock") || (userChoice == "rock" && machineChoice == "scissors")){
+        //User win
+        userPoints ++;
+        console.log("winn!")
+
+        //Style code
+        document.querySelector(".bg-triangle").style.display = "none";
+        event.currentTarget.setAttribute("id", "paper");
+        
+
+    }
+    else{
+        console.log("you lose")
+    }
+    
+}
+
+
 function scissorsGame (event){
     userChoice = "scissors";
     //machineChoice = options[Math.floor(Math.random()*3)];

@@ -70,17 +70,17 @@ header.header{
     width: 75%;
     transition: all 0.5s ease-in-out;
 }
-.game-body__circle-container-paper{
+#paper{
     position: absolute;
     left: 0;
     top: -6.5rem;
 }
-.game-body__circle-container-scissors{
+#scissors{
     position: absolute;
     right: 0;
     top: -6.5rem;
 }
-.game-body__circle-container-rock{
+#rock{
     position: absolute;
     left: 50%;
     bottom: 6rem;
