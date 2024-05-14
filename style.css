@@ -281,7 +281,7 @@ header.header{
     text-transform: uppercase;
     position: absolute;
     left: 50%;
-    bottom: -3rem;
+    top: -2rem;
     transform: translateX(-50%);
     font-size: 1.25rem;
     white-space: nowrap;

@@ -9,12 +9,7 @@ let userPoints = 0;
 
 
 //Click events to buttons
-scissors.addEventListener("click", function(event){
-    console.dir(event.currentTarget.classList[0]);
-    console.dir(typeofevent.currentTarget.id);
-    
-});
-
+scissors.addEventListener("click", game);
 paper.addEventListener("click", game);
 rock.addEventListener("click", game);
 
@@ -29,19 +24,31 @@ function game(event){
     }
     else if ((userChoice == "scissors" && machineChoice == "paper")||(userChoice == "paper" && machineChoice == "rock") || (userChoice == "rock" && machineChoice == "scissors")){
         //User win
-        userPoints ++;
         console.log("winn!")
 
         //Style code
         document.querySelector(".bg-triangle").style.display = "none";
         event.currentTarget.setAttribute("id", "paper");
+        document.getElementById(machineChoice).setAttribute("id", "scissors");
+
+        for (let choices of options){
+            if (choices != userChoice && choices != machineChoice){
+                document.getElementById(choices).style.display = "none";
+            }
+        }
         
+        newScore();
 
     }
     else{
         console.log("you lose")
     }
     
+}
+
+function newScore(){
+    userPoints ++;
+    document.querySelector(".header__value").textContent = userPoints;
 }
 
 
@@ -63,11 +70,11 @@ function scissorsGame (event){
         rock.classList.add("game-body__circle-container-scissors");
         rock.classList.remove("game-body__circle-container-rock");
         //Create user messages
-        const youpickednode = document.createElement("p");
-        const youpickedtext = document.createTextNode ("You picked")
+        const youPickedNode = document.createElement("p");
+        const youPickedText = document.createTextNode ("You picked")
         youpickednode.appendChild(youpickedtext);
 
-        
+        document.querySelector("#paper").insertAfter(youPickedNode, youPickedText);
 
 
     }
